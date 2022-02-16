@@ -1,7 +1,7 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 
 const Category = new Schema({
-  catalogId: { type: String, required: true },
+  catalogId: { type: Types.ObjectId, required: true, ref: 'Catalogs' },
   catalogName: { type: String, required: true },
   name: { type: String, required: true, unique: true },
   image: { type: String }
