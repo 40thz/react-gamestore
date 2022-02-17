@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:wght@100&display=swap");
+body {
+  font-family: 'Tomorrow', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+/*# sourceMappingURL=index.css.map */

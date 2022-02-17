@@ -1,7 +1,6 @@
 const AdminJS = require('adminjs')
 const AdminJSExpress = require('@adminjs/express')
 const AdminJSMongoose = require('@adminjs/mongoose')
-const Product = require('../Models/product.model')
 const mongoose = require('mongoose')
 
 AdminJS.registerAdapter(AdminJSMongoose)
@@ -9,8 +8,17 @@ AdminJS.registerAdapter(AdminJSMongoose)
 const adminJs = new AdminJS({
   databases: [mongoose],
   rootPath: '/admin',
+  locale: {
+    translations: {
+      labels: {
+        Catalogs: 'Каталоги',
+        Category: 'Категории',
+        Product: 'Продукты'
+      }
+    }
+  },
   branding: {
-    companyName: 'Amazing c.o.'
+    companyName: 'Админ-панель GameStore'
   }
 })
 const router = AdminJSExpress.buildRouter(adminJs)

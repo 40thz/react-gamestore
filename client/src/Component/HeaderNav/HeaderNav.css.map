@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,IAAI,EAAE,CAAC;EACP,eAAe,EAAE,QAAQ;CAC1B",
+    "sources": [
+        "HeaderNav.scss"
+    ],
+    "names": [],
+    "file": "HeaderNav.css"
+}
