@@ -4,7 +4,7 @@ const categorygModel = require('../Models/category.model')
 
 router.get('/:id', async (req, res) => {
   const id = req.params.id
-  const categoryItem = await categorygModel.find({ catalogId: id })
+  const categoryItem = await categorygModel.find({ catalog: id })
   res.json(categoryItem)
 })
 

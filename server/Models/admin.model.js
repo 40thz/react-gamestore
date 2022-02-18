@@ -2,11 +2,11 @@ const { Schema, model } = require('mongoose')
 
 const AdminSchema = new Schema(
   {
-    login: {
+    email: {
       type: String,
       required: true
     },
-    encryptedPassword: {
+    password: {
       type: String,
       required: true
     },

@@ -1,4 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import {
+  createSlice,
+  createAsyncThunk
+} from '@reduxjs/toolkit'
 import axios from 'axios'
 
 const initialState = {
@@ -6,7 +9,10 @@ const initialState = {
   isLoading: true
 }
 
-export const getCatalog = createAsyncThunk('catalog/getCatalog', async (_, { rejectWithValue, dispatch }) => {
+export const getCatalog = createAsyncThunk('catalog/getCatalog', async (_, {
+  rejectWithValue,
+  dispatch
+}) => {
   axios.get('http://localhost:5000/api/catalog').then(resp => dispatch(setCatalog(resp.data)))
 })
 
@@ -17,8 +23,18 @@ export const catalogSlice = createSlice({
     setCatalog: (state, action) => {
       state.catalogItems = action.payload
     }
+  },
+  extraReducers: {
+    [getCatalog.pending]: (state) => {
+      state.status = 'loading'
+    },
+    [getCatalog.fulfilled]: (state) => {
+      state.status = 'resolved'
+    }
   }
 })
 
-export const { setCatalog } = catalogSlice.actions
+export const {
+  setCatalog
+} = catalogSlice.actions
 export default catalogSlice.reducer

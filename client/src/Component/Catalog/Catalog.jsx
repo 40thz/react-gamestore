@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCatalog } from '../../features/catalog/catalogSlice'
 import ContentTitle from '../ContentTitle/ContentTitle'
 
-const Catalog = () => {
+const Catalog = (props) => {
   const dispatch = useDispatch()
   const catalogItems = useSelector(state => state.catalog.catalogItems)
   // const isLoading = useSelector(state => state.catalog.isLoading)
 
   React.useEffect(() => {
     dispatch(getCatalog())
+    console.log(props)
   }, [])
 
   return (

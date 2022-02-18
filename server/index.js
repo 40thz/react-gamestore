@@ -15,6 +15,7 @@ const admin = require('./Routes/admin.router')
 
 app.use(cors())
 app.use(express.json({ extended: true }))
+
 app.use('/api/catalog', catalog)
 app.use('/api/category', category)
 app.use('/api/product', product)
