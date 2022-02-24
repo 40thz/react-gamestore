@@ -1,8 +1,8 @@
-import { BallTriangle } from 'react-loader-spinner'
+import { Rings } from "react-loader-spinner";
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 const Loader = () => {
-  return <BallTriangle color='#0077ff' height={80} width={80} />
+  return <Rings color="#0077ff" height={130} width={130} />;
 }
 
 export default Loader

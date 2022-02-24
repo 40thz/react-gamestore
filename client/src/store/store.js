@@ -1,16 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-//import {composeWithDevTools} from 'remote-redux-devtools'
-import catalogSlice from '../features/catalog/catalogSlice'
-import categorySlice from '../features/category/categorySlice'
-import productSlice from '../features/product/productSlice'
-
+import { catalogApi } from "../services/catalogApi";
+import { categoryApi } from "../services/categoryApi";
+import { productApi } from "../services/productApi";
 export const store = configureStore({
   reducer: {
-    catalog: catalogSlice,
-    category: categorySlice,
-    product: productSlice
+    [catalogApi.reducerPath]: catalogApi.reducer,
+    [categoryApi.reducerPath]: categoryApi.reducer,
+    [productApi.reducerPath]: productApi.reducer,
   },
-  devTools: true
-})
-
-export default store
+  devTools: true,
+});

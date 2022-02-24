@@ -1,13 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useGetProductQuery } from "../../store";
-import ContentTitle from "../ContentTitle/ContentTitle";
+import { useGetCategoryQuery } from "../../store"
+import ContentTitle from "../ContentTitle/ContentTitle"
 import Card from "../Card/Card";
 
-const ProductCatalog = () => {
+const Category = () => {
   const params = useParams();
-  const { data = [], isLoading } = useGetProductQuery(params.categoryId);
-  console.log(data)
+  const { data = [], isLoading } = useGetCategoryQuery(params.catalogId);
+  console.log(data);
+
   return (
     <div className="container">
       <div className="catalog">
@@ -20,4 +21,4 @@ const ProductCatalog = () => {
   );
 };
 
-export default ProductCatalog;
+export default Category;

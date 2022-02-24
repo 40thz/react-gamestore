@@ -1,21 +1,24 @@
 import React from 'react'
 import './Header.scss'
-import HeaderNav from '../HeaderNav/HeaderNav'
-
-import { FaShoppingCart } from 'react-icons/fa'
+import HeaderBtn from "../HeaderBtn/HeaderBtn";
+import SearchForm from "../SearchForm/SearchForm";
 
 const Header = () => {
-  return (
-    <div className='header'>
-      <div className='header-title'>
-        <div className='header-icon'>
-          <FaShoppingCart />
+return (
+  <div className="container">
+    <div className="header">
+      <div className="header-title">
+        <div className="header-icon">
+          <img src="./logo.svg" alt="" />
         </div>
-        <div className='header-text'>SneekersShop</div>
       </div>
-      <HeaderNav />
+      <div className="header-search">
+        <HeaderBtn value="Каталог" />
+        <SearchForm />
+      </div>
     </div>
-  )
+  </div>
+);
 }
 
 export default Header

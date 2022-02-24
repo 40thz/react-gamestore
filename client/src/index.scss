@@ -1,11 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-body{
-  font-family: 'Tomorrow', sans-serif;
-  margin: 0; padding: 0;
+body {
+  font-family: 'Russo One', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../public/bg.webp') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.container{
+input{
+  outline: none;
+}
+
+.container {
+  position: relative;
   margin: 0 auto;
   max-width: 1300px;
+  z-index: 100;
 }

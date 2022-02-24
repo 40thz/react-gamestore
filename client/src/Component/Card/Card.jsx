@@ -7,7 +7,7 @@ const CatalogCard = ({ items }) => {
   return (
     <>
       {items?.map(item => (
-        <Link to={!item.catalogId ? `store/${item._id}` : `${item._id}`} className='card'>
+        <Link to={!item.catalog ? `store/${item._id}` : `${item._id}`} className='card'>
           <div className='card-image'>
             <img src={item.image} alt='img' />
             <div className='card-favorite'>
