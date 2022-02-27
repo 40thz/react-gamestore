@@ -1,14 +1,14 @@
 import React from 'react'
 import HeaderBtn from '../HeaderBtn/HeaderBtn'
 import './HeaderNav.scss'
-import { FaUser, FaShoppingBasket, FaSearch } from 'react-icons/fa'
+import { FaShoppingBasket, FaHeart } from 'react-icons/fa'
 
 const HeaderNav = () => {
   return (
     <div className='header-nav'>
-      <HeaderBtn icon={<FaUser />} />
+      <HeaderBtn value='Войти' />
+      <HeaderBtn icon={<FaHeart />} />
       <HeaderBtn icon={<FaShoppingBasket />} />
-      <HeaderBtn icon={<FaSearch />} />
     </div>
   )
 }

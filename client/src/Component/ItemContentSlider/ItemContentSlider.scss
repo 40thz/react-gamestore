@@ -1,0 +1,25 @@
+.content__slider {
+    .content {
+        position: relative;
+        left: 8%;
+        color: #fff;
+        text-transform: uppercase;
+        &-title {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        &-price {
+            font-size: 24px;
+            margin: 0 24px;
+        }
+        &-discount {
+            font-size: 16px;
+            line-height: 1;
+            text-align: center;
+            color: #000;
+            background: #fbbb43;
+            border-radius: 10px;
+            padding: 6px 8px 3px;
+        }
+    }
+}

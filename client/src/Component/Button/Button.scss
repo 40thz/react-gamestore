@@ -1,0 +1,12 @@
+.btn {
+    transition: all 0.5s;
+    padding: 11px 12px 8px;
+    background: #fbbb43;
+    border-radius: 11px;
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    &:hover{
+        background: #fff;
+    }
+}

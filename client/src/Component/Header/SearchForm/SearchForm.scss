@@ -1,0 +1,38 @@
+.header-search{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  .header-btn{
+   margin-right: 2%;
+  }
+}
+
+.header-search-form {
+  position: relative;
+  width: 100%;
+  input {
+    background: linear-gradient(0deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3));
+    border-radius: 35px;
+    border: 0;
+    padding: 13px 50px 13px 26px;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus{
+      background: #fff;
+      color: #000;
+    }
+  }
+
+  button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 22px;
+    opacity: 0.4;
+  }
+}
