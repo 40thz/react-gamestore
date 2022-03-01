@@ -1,0 +1,28 @@
+.slick-arrow {
+  .arrow-icon {
+    position: relative;
+    transition: all 0.5s;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.288);
+    border-radius: 100%;
+
+    &:hover {
+      border: 1px solid rgb(255, 255, 255);
+       &::before{
+         color: rgb(255, 255, 255)
+       }
+    }
+    &::before{
+      transition: all 0.5s;
+      content: '<';
+      position: absolute;
+      display: flex;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.288);
+      top: 50%;
+      left: 40%;
+    }
+  }
+}

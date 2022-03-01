@@ -8,14 +8,14 @@ import HeaderLogo from '../HeaderLogo/HeaderLogo';
 const Header = () => {
   return (
     <div className="container">
-      <div className="header">
+      <section className="header">
         <HeaderLogo />
         <div className="header-search">
           <HeaderBtn value="Каталог" />
           <SearchForm />
         </div>
         <HeaderNav />
-      </div>
+      </section>
     </div>
   );
 }

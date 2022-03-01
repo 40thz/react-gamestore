@@ -1,10 +1,11 @@
 import React from 'react'
 import './Button.scss'
-const Button = ({ value }) => {
-
+const Button = ({ value, onClick }) => {
   return (
-    <div className="btn">{value}</div>
-  )
-}
+    <div onClick={onClick} className="btn">
+      {value}
+    </div>
+  );
+};
 
 export default Button

@@ -10,7 +10,13 @@ require('dotenv').config()
 const app = express()
 
 // ==== Routes ====
-const { buildAdminRouter, catalogRouter, categoryRouter, productRouter, } = require("./routes");
+const {
+  buildAdminRouter,
+  catalogRouter,
+  categoryRouter,
+  productRouter,
+  previewProductRouter,
+} = require("./routes");
 
 // ==== Admin options ====
 const admin = new AdminJS(options)
@@ -26,6 +32,7 @@ app.use(admin.options.rootPath, adminRouter)
 app.use(`/api/catalog`, catalogRouter);
 app.use(`/api/category`, categoryRouter);
 app.use(`/api/product`, productRouter);
+app.use(`/api/preview`, previewProductRouter);
 
 // ==== App Start On Production ====
 if (process.env.NODE_ENV === 'production') {

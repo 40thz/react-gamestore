@@ -1,25 +1,29 @@
 import React from 'react'
 import Button from '../Button/Button'
 import './ItemContentSlider.scss'
+import { useAction } from '../../hooks/useActions'
 
-const ItemContentSlider = ({ gameName, gamePrice, gameDiscount }) => {
+const ItemContentSlider = ({ product }) => {
+    const { addItem } = useAction()
     return (
+
         <div className="content">
             <div className="content-title">
-                {gameName}
+                {product.name}
             </div>
             <div className="row">
-                <Button value='В корзину' />
+
+                <Button onClick={() => addItem(product)} value='В корзину' />
 
                 <div className="content-price">
-                    {gamePrice} ₽
+                    {product.price} ₽
                 </div>
 
-                {gameDiscount &&
+
                     <div className="content-discount">
-                        {gameDiscount} %
+                        12%
                     </div>
-                }
+                
             </div>
         </div>
     )
