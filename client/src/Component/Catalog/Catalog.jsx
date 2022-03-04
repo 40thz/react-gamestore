@@ -7,6 +7,7 @@ import Loader from '../Loader/Loader'
 
 const Catalog = () => {
   const { data = [], isLoading } = useGetCatalogQuery();
+  
   return (
     <div className="container">
       <div className="catalog">

@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import './Button.scss'
-const Button = ({ value, onClick }) => {
+
+const Button = ({ value, onClick, to='' }) => {
   return (
-    <div onClick={onClick} className="btn">
+    <Link to={to} onClick={onClick} className="btn">
       {value}
-    </div>
+    </Link>
   );
 };
 

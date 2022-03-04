@@ -1,8 +1,9 @@
 import React from 'react'
 import './HeaderBtn.scss'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 
-const HeaderBtn = ({ icon, type, value }) => {
+const HeaderBtn = ({ icon, type, value, href='' }) => {
 
   const componentClasses = {
     'header-btn-border': value,
@@ -10,7 +11,11 @@ const HeaderBtn = ({ icon, type, value }) => {
     'header-btn-icon': icon,
   }
 
-  return <div className={ classNames( componentClasses ) }> {value || icon} </div>;
+  return (
+    <Link to={href}>
+      <div className={classNames(componentClasses)}> {value || icon} </div>
+    </Link>
+  );
 }
 
 export default HeaderBtn

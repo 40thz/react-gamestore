@@ -5,12 +5,12 @@ import { FaShoppingBasket, FaHeart } from 'react-icons/fa'
 
 const HeaderNav = () => {
   return (
-    <div className='header-nav'>
-      <HeaderBtn value='Войти' />
+    <div className="header-nav">
+      <HeaderBtn value="Войти" />
       <HeaderBtn icon={<FaHeart />} />
-      <HeaderBtn icon={<FaShoppingBasket />} />
+      <HeaderBtn href={'/basket'} icon={<FaShoppingBasket />} />
     </div>
-  )
+  );
 }
 
 export default HeaderNav

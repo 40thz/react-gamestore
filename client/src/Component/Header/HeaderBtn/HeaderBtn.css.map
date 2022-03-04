@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,MAAM,EAAE,OAAO;CAIhB;;AALD,AAEE,WAFS,AAER,MAAM,CAAA;EACL,OAAO,EAAE,GAAG;CACb",
-    "sources": [
-        "HeaderBtn.scss"
-    ],
-    "names": [],
-    "file": "HeaderBtn.css"
-}

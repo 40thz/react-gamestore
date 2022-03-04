@@ -1,11 +1,8 @@
 import React from 'react'
+import Basketcontainer from '../Component/Basket/Basketcontainer/Basketcontainer'
 
 const Basket = () => {
-  return (
-    <div>
-      <div className="container"></div>
-    </div>
-  )
+  return <Basketcontainer />
 }
 
 export default Basket

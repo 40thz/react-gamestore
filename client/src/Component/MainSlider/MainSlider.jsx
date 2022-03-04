@@ -45,18 +45,18 @@ const MainSlider = () => {
       {!isLoading && (
         <>
           <Slider {...settingsBackgroundSlider}>
-            {data.map((bg) => (
-              <div className="item">
-                <img src={bg.bg} alt="" />
+            {data.map((bg, i) => (
+              <div key={i} className="item">
+                <img src={bg.uploadedFile} alt="" />
               </div>
             ))}
           </Slider>
-
+{/* 
           <Slider {...settingsSliderContent}>
-            {data.map((product) => (
-              <ItemContentSlider product={product.product} />
+            {data.map((product, i) => (
+              <ItemContentSlider key={i} product={product.product} />
             ))}
-          </Slider>
+          </Slider> */}
         </>
       )}
     </div>
