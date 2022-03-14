@@ -2,18 +2,22 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useGetProductQuery } from "../../store";
 import ContentTitle from "../ContentTitle/ContentTitle";
-import Card from "../Card/Card";
+import ProductCart from "./ProductCart/ProductCart";
 
 const ProductCatalog = () => {
   const params = useParams();
   const { data = [], isLoading } = useGetProductQuery(params.categoryId);
-  console.log(data)
+ 
   return (
     <div className="container">
       <div className="catalog">
         <ContentTitle name="PS4" />
         <div className="catalog-container">
-          <Card items={data} />
+          {
+            data.map(item => (
+              <ProductCart item={item} />
+            ))
+          }
         </div>
       </div>
     </div>

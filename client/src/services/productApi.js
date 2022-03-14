@@ -7,9 +7,12 @@ export const productApi = createApi({
   }),
   endpoints: (build) => ({
     getProduct: build.query({
-      query: (id) => `api/product/${id ? id : ''}`,
+      query: (id) => `api/product/${id ? id : ""}`,
+    }),
+    getProductById: build.query({
+      query: (id) => `api/product/byid/${id ? id : ""}`,
     }),
   }),
 });
 
-export const { useGetProductQuery } = productApi;
+export const { useGetProductQuery, useGetProductByIdQuery } = productApi;

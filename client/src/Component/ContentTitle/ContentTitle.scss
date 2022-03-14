@@ -1,11 +1,43 @@
-.contentTitle {
-  position: relative;
-  font-size: 24px;
-  letter-spacing: 5px;
+.content__title {
+  h1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: #fbbb43;
+
+    &:before,
+    &:after {
+      content: "";
+      margin: 0.5em 20px 0;
+      top: 1px;
+      height: 1px;
+      flex-grow: 1;
+      background-color: white;
+    }
+
+    &:before {
+      background: rgb(251, 187, 67);
+      background: linear-gradient(90deg, rgba(0, 212, 255, 0) 0%, rgba(251, 187, 67, 1) 90%);
+    }
+
+    &:after {
+      background: rgb(251, 187, 67);
+      background: linear-gradient(90deg, rgba(251, 187, 67, 1) 41%, rgba(0, 212, 255, 0) 100%);
+    }
+  }
+
+  &-error {
+    color: #fff;
+  }
+}
+
+.basketIsClear{
+  text-align: center;
+  margin-top: 15%;
+}
+
+.content__title-error{
   margin-bottom: 30px;
-  box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  width: 150px;
-  padding: 5px;
-  color: rgba(0, 0, 0, 0.712);
-  z-index: 1;
 }

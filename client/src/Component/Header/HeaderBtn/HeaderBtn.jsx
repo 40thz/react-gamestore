@@ -3,7 +3,7 @@ import './HeaderBtn.scss'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 
-const HeaderBtn = ({ icon, type, value, href='' }) => {
+const HeaderBtn = ({ icon, value, href='' }) => {
 
   const componentClasses = {
     'header-btn-border': value,

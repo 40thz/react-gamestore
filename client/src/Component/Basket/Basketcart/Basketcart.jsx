@@ -9,7 +9,7 @@ const { removeItem } = useAction()
   return (
     <div className="basket__cart">
       <div className="basket__cart-icon">
-        <img src={item.image} alt="" />
+        <img src={item.uploadedFile} alt="" />
       </div>
       <div className="basket__cart-info">
         <div className="basket__cart-head">

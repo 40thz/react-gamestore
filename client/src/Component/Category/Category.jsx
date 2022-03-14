@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useGetCategoryQuery } from "../../store"
 import ContentTitle from "../ContentTitle/ContentTitle"
-import Card from "../Card/Card";
+import Cart from "../Cart/Cart";
 
 const Category = () => {
   const params = useParams();
@@ -14,7 +14,7 @@ const Category = () => {
       <div className="catalog">
         <ContentTitle name="PS4" />
         <div className="catalog-container">
-          <Card items={data} />
+          <Cart items={data} />
         </div>
       </div>
     </div>

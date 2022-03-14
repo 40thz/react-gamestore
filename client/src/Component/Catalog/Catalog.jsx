@@ -1,8 +1,11 @@
 import React from 'react'
+
 import './Catalog.scss'
-import Card from '../Card/Card'
-import ContentTitle from '../ContentTitle/ContentTitle'
+
 import { useGetCatalogQuery } from "../../store";
+
+import Cart from "../Cart/Cart";
+import ContentTitle from '../ContentTitle/ContentTitle'
 import Loader from '../Loader/Loader'
 
 const Catalog = () => {
@@ -13,7 +16,7 @@ const Catalog = () => {
       <div className="catalog">
         <ContentTitle name="Каталог" />
         <div className="catalog-container">
-          {isLoading ? <Loader />  : <Card items={data} />}
+          {isLoading ? <Loader /> : <Cart items={data} />}
         </div>
       </div>
     </div>
