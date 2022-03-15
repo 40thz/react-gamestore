@@ -19,8 +19,8 @@ const { removeItem } = useAction()
           </div>
         </div>
         <div className="basket__cart-price">
-          <span>{item.price}</span>
-          <div className="basket__cart-discount">12 %</div>
+          <span>{item.price} ₽</span>
+          <div className="basket__cart-discount">{item.discount} %</div>
         </div>
       </div>
     </div>

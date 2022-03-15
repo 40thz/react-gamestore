@@ -36,11 +36,19 @@
   }
 
   &-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.5s;
     position: relative;
     top: 50px;
     opacity: 0;
+
+    .discount {
+      margin-left: 15px;
+    }
   }
+
   &-name {
     transition: all 0.5s;
     position: absolute;
@@ -56,6 +64,7 @@
     width: 100%;
     text-align: center;
     padding: 0 20px;
+
     .btn {
       position: relative;
       opacity: 0;

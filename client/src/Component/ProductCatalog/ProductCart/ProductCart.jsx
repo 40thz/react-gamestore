@@ -23,7 +23,12 @@ const ProductCart = ({ item }) => {
             value={isExistInCart ? "Уже в коризне" : "Купить"}
           />
         </div>
-        <div className="product__cart-price">{item.price} ₽</div>
+        <div className="product__cart-price">
+          <span>{item.priceWithDiscount ? item.priceWithDiscount : item.price} ₽</span>
+          {item.discount &&
+           <div className="discount">{item.discount} %</div>
+          }
+        </div>
       </div>
       <div className="product__cart-name">{item.name}</div>
     </Link>

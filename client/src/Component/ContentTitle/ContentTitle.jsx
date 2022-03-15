@@ -2,11 +2,11 @@ import React from 'react'
 import cn from 'classnames'
 import './ContentTitle.scss'
 
-const ContentTitle = ({ name, type }) => {
+const ContentTitle = ({name, error}) => {
 
   const options = {
-    'content__title': !type,
-    'content__title-error': type
+    'content__title': !error,
+    'content__title-error': error
   }
 
   return (

@@ -18,7 +18,7 @@ const ItemContentSlider = ({ product }) => {
           />
 
           <div className="content-price">{product.price} ₽</div>
-          <div className="content-discount">12%</div>
+          <div className="discount">12%</div>
         </div>
       </div>
     );

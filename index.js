@@ -44,7 +44,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // ==== App Start ====
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT  ||  5000
 const MONGO_URI = process.env.MONGO_URI
 
 const start = async () => {

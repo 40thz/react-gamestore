@@ -4,7 +4,7 @@ import "./HeaderLogo.scss"
 const HeaderLogo = () => {
     return (
         <div className="header-icon">
-            <img src="./logo.svg" alt="" />
+            <img src="/logo.svg" alt="" />
         </div>
     )
 }

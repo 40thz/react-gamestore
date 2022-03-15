@@ -4,6 +4,8 @@ import { categoryApi } from "../services/categoryApi";
 import { productApi } from "../services/productApi";
 import { previewApi } from "../services/previewApi";
 import { cartReducer } from './slice/cart.slice'
+import { productReducer } from './slice/product.slice'
+
 export const store = configureStore({
   reducer: {
     [catalogApi.reducerPath]: catalogApi.reducer,
@@ -11,6 +13,7 @@ export const store = configureStore({
     [productApi.reducerPath]: productApi.reducer,
     [previewApi.reducerPath]: previewApi.reducer,
     cart: cartReducer,
+    product: productReducer,
   },
   devTools: true,
 });
