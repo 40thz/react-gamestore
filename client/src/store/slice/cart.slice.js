@@ -1,6 +1,4 @@
-import {
-  createSlice
-} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = []
 
@@ -9,13 +7,16 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action) => {
-      if(action.payload.priceWithDiscount) {
+      const product = action.payload
+
+      if(product.priceWithDiscount){
+
         action.payload = {
-          ...action.payload,
-          price: action.payload.priceWithDiscount
+          ...product,
+          price: product.priceWithDiscount
         }
       }
-      
+
       state.push(action.payload)
     },
     removeItem: (state, action) => {

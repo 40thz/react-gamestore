@@ -1,7 +1,7 @@
 import React from 'react'
 import './ProductInfo.scss'
 
-const ProductInfo = () => {
+const ProductInfo = ({ data }) => {
   return (
     <div className="product__info">
       <div className="product__info-item">
@@ -9,7 +9,7 @@ const ProductInfo = () => {
           Платформа
         </div>
         <div className="product__info-value">
-          test
+          {data.Platform}
         </div>
       </div>
       <div className="product__info-item">
@@ -17,7 +17,7 @@ const ProductInfo = () => {
           Дата выхода
         </div>
         <div className="product__info-value">
-          test
+          {data.releaseDate}
         </div>
       </div>
       <div className="product__info-item">
@@ -25,7 +25,7 @@ const ProductInfo = () => {
           Издатель
         </div>
         <div className="product__info-value">
-          test
+          {data.publisher}
         </div>
       </div>
       <div className="product__info-item">
@@ -33,7 +33,7 @@ const ProductInfo = () => {
           Разработчик
         </div>
         <div className="product__info-value">
-          test
+          {data.developer}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import './PreviewImage.scss'
 
 const PreviewImage = ({ image }) => {
   return (
-    <div className="product__preview">
+    <div className="product__preview product__col-small">
       <img src={image} alt="Игра"/>
     </div>
   )

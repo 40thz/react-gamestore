@@ -34,10 +34,13 @@ section#product {
 
   &__container {
     display: flex;
+    flex-direction: column;
     width: 90vw;
+    padding: 0 8%;
   }
 
   &__row {
+    position: relative;
     display: flex;
     width: 100%;
 
@@ -45,5 +48,9 @@ section#product {
 
   &__col {
     width: 100%;
+    &-small {
+      max-width: 370px;
+      margin-right: 55px;
+    }
   }
 }

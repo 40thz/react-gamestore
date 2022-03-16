@@ -12,6 +12,7 @@ const ProductSchema = new Schema({
   service: { type: String },
   language: { type: String },
   activationRegion: { type: String },
+  platform: { type: String },
   releaseDate: { type: Date },
   publisher: { type: String },
   developer: { type: String },

@@ -10,7 +10,8 @@ import PreviewImage from './PreviewImage/PreviewImage'
 import ProductTitle from './ProductTitle/ProductTitle'
 import HeaderBtn from '../Header/HeaderBtn/HeaderBtn'
 import ProductPrice from './ProductPrice/ProductPrice'
-//import ProductInfo from './ProductInfo/ProductInfo'
+import ProductInfo from './ProductInfo/ProductInfo'
+import ProductSlider from './ProductSlider/ProductSlider'
 
 const ProductContainer = () => {
 const params = useParams();
@@ -35,8 +36,14 @@ return (
           </div>
           }
         </div>
-        {/*
-        <ProductInfo /> */}
+      </div>
+      <div className="product__row">
+        <div className="product__col-small">
+          <ProductInfo data={data}/>
+        </div>
+        <div className="product__row">
+          <ProductSlider />
+        </div>
       </div>
     </div> : 'load'
     }
