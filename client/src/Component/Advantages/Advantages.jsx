@@ -5,7 +5,8 @@ import AdvantageCart from './AdvantageCart/AdvantageCart'
 
 const Advantages = () => {
   return (
-    <div className="container">
+   <section id="advantages">
+      <div className="container">
       <div className="advantages">
         <AdvantageCart
           icon={"https://gabestore.ru/images/Gabestore_icons_discounts.png"}
@@ -29,6 +30,7 @@ const Advantages = () => {
         />
       </div>
     </div>
+   </section>
   );
 }
 

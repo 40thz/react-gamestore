@@ -12,6 +12,8 @@ import HeaderBtn from '../Header/HeaderBtn/HeaderBtn'
 import ProductPrice from './ProductPrice/ProductPrice'
 import ProductInfo from './ProductInfo/ProductInfo'
 import ProductSlider from './ProductSlider/ProductSlider'
+import SubInfo from './SubInfo/Subinfo'
+import InfoIcon from './InfoIcon/InfoIcon'
 
 const ProductContainer = () => {
 const params = useParams();
@@ -35,11 +37,19 @@ return (
             <ProductPrice data={data} />
           </div>
           }
+          <div className="product__row">
+            <SubInfo data={data}/>
+          </div>
         </div>
       </div>
       <div className="product__row">
         <div className="product__col-small">
           <ProductInfo data={data}/>
+         <div className="product__row wrap">
+            {data.extendInfo.map(item => (
+            <InfoIcon icon={item.icon} value={item.name}/>
+          ))}
+         </div>
         </div>
         <div className="product__row">
           <ProductSlider />

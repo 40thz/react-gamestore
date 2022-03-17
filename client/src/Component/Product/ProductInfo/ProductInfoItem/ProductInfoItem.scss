@@ -1,0 +1,14 @@
+.product__info {
+  &-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  &-title {
+    width: 60%;
+  }
+  &-value {
+    text-align: start;
+    width: 250px;
+  }
+}

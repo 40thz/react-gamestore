@@ -20,7 +20,9 @@ const { removeItem } = useAction()
         </div>
         <div className="basket__cart-price">
           <span>{item.price} ₽</span>
-          <div className="basket__cart-discount">{item.discount} %</div>
+          {item.discount &&
+            <div className="basket__cart-discount">{item.discount} %</div>
+          }
         </div>
       </div>
     </div>

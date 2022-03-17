@@ -28,7 +28,7 @@ const ProductPrice = ( {data } ) => {
      {data.discount &&
        <>
           <div className="product__price-item">
-            <div className="priceWithoutDiscount">{data.price} %</div>
+            <div className="priceWithoutDiscount">{data.price} ₽</div>
           </div>
           <div className="product__price-item">
             <div className="discount">{data.discount} %</div>

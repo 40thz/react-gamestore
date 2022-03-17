@@ -37,7 +37,9 @@ input {
   outline: none;
 }
 
-section {}
+section {
+  z-index: 1;
+}
 
 img {
   vertical-align: middle;
@@ -61,13 +63,14 @@ img {
   position: relative;
   margin: 0 auto;
   max-width: 90%;
-  z-index: 100;
 }
 
 .main__slider {
   position: absolute;
 }
-
+.wrap {
+  flex-wrap: wrap;
+}
 .slick-dots {
   height: fit-content;
   width: 50px;

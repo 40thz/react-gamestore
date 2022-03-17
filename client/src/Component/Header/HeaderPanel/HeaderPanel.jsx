@@ -7,16 +7,16 @@ import HeaderLogo from '../HeaderLogo/HeaderLogo';
 
 const Header = () => {
   return (
-    <div className="container">
-      <header className="header">
+    <header className="header">
+     <div className="header__container">
         <HeaderLogo />
         <div className="header-search">
           <HeaderBtn value="Каталог" />
           <SearchForm />
         </div>
         <HeaderNav />
-      </header>
-    </div>
+     </div>
+    </header>
   );
 }
 

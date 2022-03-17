@@ -1,5 +1,7 @@
 const { model, Schema, Types } = require("mongoose");
 
+
+
 const ProductSchema = new Schema({
   uploadedFile: { type: String, required: true },
   category: { type: Types.ObjectId, required: true, ref: "Category" },
@@ -13,9 +15,10 @@ const ProductSchema = new Schema({
   language: { type: String },
   activationRegion: { type: String },
   platform: { type: String },
-  releaseDate: { type: Date },
+  releaseDate: { type: String },
   publisher: { type: String },
   developer: { type: String },
+  extendInfo: [ { icon: { type: String }, name: { type: String } } ],
   stock: { type: Boolean },
   raiting: { type: Number, default: 5 },
 });
